@@ -1,0 +1,81 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="*" >
+
+    <TableRow
+        android:id="@+id/first_row"
+        android:layout_margin="0dip" >
+
+        <EditText
+            android:id="@+id/start"
+            android:layout_width="0dip"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Start Address"
+            android:inputType="text"
+            android:padding="15dip" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/second_row"
+        android:layout_margin="0dip" >
+
+        <EditText
+            android:id="@+id/end"
+            android:layout_width="0dip"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Destination Address"
+            android:inputType="text"
+            android:padding="15dip" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/third_row"
+        android:layout_margin="0dip" >
+
+        <ImageButton
+            android:id="@+id/getGPS"
+            android:layout_width="0dip"
+            android:layout_height="50dp"
+            android:layout_weight=".3"
+            android:onClick="onClickGetGPS"
+            android:src="@drawable/gps" />
+
+        <ImageButton
+            android:id="@+id/flip"
+            android:layout_width="0dip"
+            android:layout_height="50dp"
+            android:layout_weight=".3"
+            android:onClick="onClickFlip"
+            android:src="@drawable/flip" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dip"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:prompt="@string/driving"
+            tools:listitem="@android:layout/simple_spinner_dropdown_item" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/fourth_row"
+        android:layout_height="match_parent"
+        android:layout_margin="0dip" >
+
+        <Button
+            android:id="@+id/getdirections"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickShowMap"
+            android:padding="15dip"
+            android:text="Get Directions" />
+    </TableRow>
+
+</TableLayout>
